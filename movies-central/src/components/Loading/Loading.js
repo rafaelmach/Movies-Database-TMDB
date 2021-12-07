@@ -5,7 +5,7 @@ import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader"
 const Loading = () => {
   return (
     <LoadingContainer>
-      <ClimbingBoxLoader size={50} color={"#ffffff"} loading={true} />
+      <ClimbingBoxLoader size={30} color={"#ffffff"} loading={true} />
     </LoadingContainer>
   )
 }
