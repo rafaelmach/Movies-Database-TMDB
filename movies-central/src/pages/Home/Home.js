@@ -16,7 +16,6 @@ const Home = () => {
   }
 
   const getMovies = () => {
-    
     axios
       .get(
         `${BASE_URL}/popular?api_key=${process.env.REACT_APP_TMDB_KEY}&${LANGUAGE}&page=1`

@@ -6,19 +6,24 @@ import { LANGUAGE } from '../../constants/language'
 import { BASE_URL } from '../../constants/urls'
 import { GeneralContainer, InfoContainer, MoviePoster, Overview, MainTitle, OriginalTitle, GenderWrap, DateRunTime, BackButton } from './DetailsPage.styles'
 import { goBack } from '../../routes/coordinator';
+import Loading from '../../components/Loading/Loading';
 
 
 const DetailsPage = () => {
     const [movie, setMovie] = useState({})
+    const [isLoading, setIsLoading] = useState(false)
     const params = useParams()
     const history = useHistory()
 
     const getDetails = () => {
+        setIsLoading(true)
         axios.get(`${BASE_URL}/${params.id}?api_key=${process.env.REACT_APP_TMDB_KEY}&${LANGUAGE}`)
         .then((res) => {
             setMovie(res.data)
+            setIsLoading(false)
         })
         .catch((error) => {
+            setIsLoading(false)
             console.log(error)
         })
     }
@@ -44,32 +49,32 @@ const DetailsPage = () => {
 
     return (
         <GeneralContainer>
-            
-            <InfoContainer>
-                <MainTitle>
-                    {movie.title}
-                </MainTitle>
-                <OriginalTitle>Título original: {movie.original_title}</OriginalTitle>
-                <DateRunTime>
-                <p>{movie.release_date}</p>
-                <p>{ConvertedTime()}</p>
-                </DateRunTime>
-                
-                <Overview>{movie.overview}</Overview>
-                <p>Avaliação do TMDB: ⭐ <strong>{movie.vote_average}</strong></p>
-                <p>Arrecadação: {numberDollar}</p>
-                <GenderWrap>
-                 {movieGenres && movieGenres.map((item) => 
-                    
-                    <p key={item.id}>{item.name}</p>
-                
-                    )}
-                </GenderWrap>
-                <BackButton onClick={() => goBack(history)} aria-label="Botão para Voltar" />
-                
-            </InfoContainer>
-            <MoviePoster src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} />
-            
+            {
+                isLoading ? <Loading />
+                : 
+            <><InfoContainer>
+                        <MainTitle>
+                            {movie.title}
+                        </MainTitle>
+                        <OriginalTitle>Título original: {movie.original_title}</OriginalTitle>
+                        <DateRunTime>
+                            <p>{movie.release_date}</p>
+                            <p>{ConvertedTime()}</p>
+                        </DateRunTime>
+
+                        <Overview>{movie.overview}</Overview>
+                        <p>Avaliação do TMDB: ⭐ <strong>{movie.vote_average}</strong></p>
+                        <p>Arrecadação: {numberDollar}</p>
+                        <GenderWrap>
+                            {movieGenres && movieGenres.map((item) => <p key={item.id}>{item.name}</p>
+
+                            )}
+                        </GenderWrap>
+                        <BackButton onClick={() => goBack(history)} aria-label="Botão para Voltar" />
+
+                    </InfoContainer>
+                    <MoviePoster src={`https://image.tmdb.org/t/p/original${movie.poster_path}`} /></>
+            }    
         </GeneralContainer>
     )
 }
