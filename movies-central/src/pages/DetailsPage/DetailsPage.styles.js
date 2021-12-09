@@ -63,6 +63,8 @@ export const Overview = styled.p`
 export const GenderWrap = styled.div`
     display: flex;
     justify-content: left;
+    flex-wrap: wrap;
+    max-width: 600px;
 
     p {
         margin-right: 50px;
@@ -73,8 +75,7 @@ export const GenderWrap = styled.div`
     }
 
     @media screen and (max-width: 810px) {
-        flex-wrap: wrap;
-
+        
         p {
         margin-right: 20px;
     }
