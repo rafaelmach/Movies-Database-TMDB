@@ -6,11 +6,10 @@ export const MovieCardContainer = styled.div`
     height: 400px;
     margin: 15px;
     position: relative;
-    /* box-shadow */
-    
 
     &:hover {
         cursor: pointer;
+        box-shadow: rgba(255, 255, 255) 0px 13px 27px -5px, rgba(255, 255, 255) 0px 8px 16px -8px;
     }
 `
 

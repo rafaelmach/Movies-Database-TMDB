@@ -30,7 +30,8 @@ export const InfoContainer = styled.div`
     border-radius: 10px;
     margin-right: 30px;
     height: auto;
-
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    
     @media screen and (max-width: 800px) {
         margin: 10px;
 
@@ -100,6 +101,7 @@ export const MoviePoster = styled.img`
     display: flex;
     flex-direction: column;
     justify-Content: flex-end;
+    box-shadow: rgba(255, 255, 255, 0.19) 0px 10px 20px, rgba(255, 255, 255, 0.23) 0px 6px 6px;
     
 
     @media screen and (max-width: 800px) {
