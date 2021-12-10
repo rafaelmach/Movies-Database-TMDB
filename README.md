@@ -19,7 +19,7 @@ Movies Database
 </div>
 <br>
 <div align="center">
-  <img src="https://user-images.githubusercontent.com/85365177/141133179-770c9afc-ee3b-4a7e-8302-660855f2e452.gif" alt="demo-web" height="425" width="770">
+  <img src="https://user-images.githubusercontent.com/85365177/145585085-3edd7057-1679-46da-9140-9df95cbb9a57.gif" alt="demo-web" height="425" width="770">
 </div>
   
 
