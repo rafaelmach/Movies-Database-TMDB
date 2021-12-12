@@ -44,13 +44,9 @@ Este aplicativo apresenta todas as ferramentas e práticas mais recentes em dese
  </div>
  <br>
 
-- ⚛️ **Axios** — As informações dos cards de serviços estão em um arquivo JSON — Simulei uma requisição a uma API usando Axios e mostrei as informações nos cards
-- 🆔 **Modal** — Criei um Modal ao clicar no card de cartão de crédito usando as melhores práticas — com createPortal
+- ⚛️ **Axios** — Consumi todos os dados da API The Movies Database utilizando o Axios 
 - 📱  **Responsividade** — Website totalmente responsivo
-- 🖱 **Smooth Scroll** — Ao rolar o site, "scrollar", a transição é feita de forma suave — Implementado com a Lib react-scroll
-- :zap: **Animações** — Efeitos de transição e animação com a Lib Framer Motion
-- 🔄 **Loadings** — Loading ao carregar o site pela primeira vez — Implementado com a Lib react-spinners 
-- ⌨ **Outros** — Efeito de digitação automática na Homepage - Implementado com a Lib iTyped
+- 🔄 **Loadings** — Loading ao carregar o site pela primeira vez e Loading ao acessar a página de detalhes dos filmes, enquanto é feita a requisição à API — Implementado com a Lib react-spinners 
 
 <br>
 
