@@ -21,7 +21,7 @@ export const InfoContainer = styled.div`
     display: flex;
     flex-direction: column;
     text-align: left;
-    padding: 50px;
+    padding: 25px;
     width: 60vw;
     max-width: 600px;
     min-width: 300px;
@@ -58,6 +58,7 @@ export const OriginalTitle = styled.p`
 export const Overview = styled.p`
     text-align:justify;
     line-height: 1.7;
+    font-size: 0.9rem;
 `
 
 export const GenderWrap = styled.div`
@@ -67,11 +68,12 @@ export const GenderWrap = styled.div`
     max-width: 600px;
 
     p {
-        margin-right: 50px;
+        margin-right: 30px;
         border: 2px solid white;
         border-radius: 10px;
         padding: 10px;
         align-items: center;
+        font-size: 0.9rem;
     }
 
     @media screen and (max-width: 810px) {
@@ -85,8 +87,8 @@ export const GenderWrap = styled.div`
 
 export const DateRunTime = styled.div`
     display: flex;
-    justify-content: space-around;
     justify-content: left;
+    font-size: 0.9rem;
 
     p {
         margin-right: 40px;
@@ -96,8 +98,8 @@ export const DateRunTime = styled.div`
 
 export const MoviePoster = styled.img`
     border-radius: 10px;
-    width: 450px;
-    height: 600px;
+    width: 400px;
+    height: 550px;
     margin: 15px;
     display: flex;
     flex-direction: column;
