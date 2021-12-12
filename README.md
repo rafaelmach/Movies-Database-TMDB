@@ -64,6 +64,17 @@ Este aplicativo apresenta todas as ferramentas e práticas mais recentes em dese
 Este comando irá instalar todas as dependências necessárias para a aplicação rodar
 <br>
 
+## Configurando a API Key
+
+Antes de executar a aplicação é necessário fornecer uma API Key. Você precisará fazer o cadastro no site https://www.themoviedb.org/ --- Após fazer o cadastro e clicar em API, procure pela <strong>Chave da API (v3 auth),</strong> conforme a imagem abaixo:
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/85365177/145719331-2b7160c2-6881-4ac9-9033-d35e07269480.jpeg" alt="Cadastro no site TMDB">
+</div>
+
+<br>
+
+
 ## Executando a aplicação
 
 ### `yarn start` ou `npm start`
